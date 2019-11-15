@@ -1,29 +1,22 @@
-# vue-elm
+项目名称：饿了么
 
-## Project setup
-```
-yarn install
-```
+用户群：c端
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
+技术栈：vue + vuex + vue-router + axios
 
-### Compiles and minifies for production
-```
-yarn run build
-```
+src
 
-### Run your tests
-```
-yarn run test
-```
+    assets
 
-### Lints and fixes files
-```
-yarn run lint
-```
+    components
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+    router
+
+    store
+
+    views
+
+    App.vue
+
+    main.js
+    
