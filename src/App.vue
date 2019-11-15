@@ -1,42 +1,36 @@
 <template>
-  <div id="app">
-    <header>pppppp</header>
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
-</template>
+    <div id="app">
+        <!-- <transition name="router-fade" mode="out-in">
+            <keep-alive>
+                <router-view v-if="$route.meta.keepAlive"></router-view>
+            </keep-alive>
+        </transition>
+        <transition name="router-fade" mode="out-in">
+            <router-view v-if="!$route.meta.keepAlive"></router-view>
+        </transition> -->
+        <router-view></router-view>
 
+    </div>
+</template>
+<script>
+export default {
+  name: 'App'
+}
+</script>
 <style lang="scss">
 *{
   margin: 0;
   padding: 0;
 }
-header{
-  background-color:blue;
-  color: #fff;
-  width: 375px;
+html,body{
+  color: #000;
 }
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+.router-fade-enter-active,
+.router-fade-leave-active {
+    transition: opacity 0.3s;
 }
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+.router-fade-enter,
+.router-fade-leave-active {
+    opacity: 0;
 }
 </style>
