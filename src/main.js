@@ -4,7 +4,8 @@ import router from './router'
 import store from './store'
 // rem set
 import 'lib-flexible/flexible.js'
-
+// global svg
+import '@/icons'
 Vue.config.productionTip = false
 
 new Vue({
