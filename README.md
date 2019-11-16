@@ -2,7 +2,7 @@
 
 用户群：c端
 
-技术栈：vue + vuex + vue-router + axios
+技术栈：vue + vuex + vue-router + axios + vue-cli3.X
 
 src
 
@@ -19,4 +19,3 @@ src
     App.vue
 
     main.js
-    
