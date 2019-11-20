@@ -2,10 +2,11 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-// rem set
-import 'lib-flexible/flexible.js'
-// global svg
-import '@/icons'
+
+import 'lib-flexible/flexible.js' // rem set
+import '@/icons' // global svg
+import '@/permission.js' // permission control
+
 Vue.config.productionTip = false
 
 new Vue({

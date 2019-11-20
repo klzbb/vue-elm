@@ -45,8 +45,6 @@
                 </ul>
             </div>
         </div>
-
-        <!-- {{currentCity}} -->
     </div>
 </template>
 <script>

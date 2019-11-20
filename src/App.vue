@@ -18,6 +18,11 @@ export default {
 }
 </script>
 <style lang="scss">
+
+#nprogress .bar {
+  background: red !important; //进度条自定义颜色
+  height: 100px;
+}
 *{
   margin: 0;
   padding: 0;
