@@ -1,15 +1,23 @@
+<!--
+ * @Descripttion: app header
+ * @version: 1.0.0
+ * @Author: Author
+ * @Date: 2019-11-26 17:45:15
+ * @LastEditors: konglingzhan
+ * @LastEditTime: 2019-11-29 16:22:12
+ -->
 <template>
   <div class="header">
     <slot name="logo"></slot>
-    <span @click="sign">登陆 | 注册</span>
+    <span @click="loginOrSign">登陆 | 注册</span>
   </div>
 </template>
 <script>
 export default {
   name: 'PubHeader',
   methods: {
-    sign () {
-      alert('登陆注册·')
+    loginOrSign () {
+      this.$emit('loginOrSign')
     }
   }
 

@@ -1,7 +1,15 @@
+/*
+ * @Descripttion: DOP
+ * @version: 1.0.0
+ * @Author: Author
+ * @Date: 2019-11-26 17:45:15
+ * @LastEditors: konglingzhan
+ * @LastEditTime: 2019-11-29 14:30:16
+ */
 
 import axios from 'axios'
 import router from '@/router/index.js'
-import store from '@/store/index.js'
+// import store from '@/store/index.js'
 const VUE_APP_BASEURL = process.env.VUE_APP_BASEURL
 const service = axios.create({
   baseURL: VUE_APP_BASEURL,
@@ -65,7 +73,7 @@ service.interceptors.response.use(function (response) {
   }
 }, function (error) {
   // service error : 404,400,500 handler
-  store.commit('dialog/SET_LOADING_SHOW', 0)
+  // store.commit('dialog/SET_LOADING_SHOW', 0)
   switch (error.response.status) {
     case 404:
       router.push('/404')

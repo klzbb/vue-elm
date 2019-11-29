@@ -1,3 +1,11 @@
+/*
+ * @Descripttion: DOP
+ * @version: 1.0.0
+ * @Author: Author
+ * @Date: 2019-11-26 17:45:15
+ * @LastEditors: konglingzhan
+ * @LastEditTime: 2019-11-29 14:30:08
+ */
 const path = require('path')
 function resolve (dir) {
   return path.join(__dirname, dir)
