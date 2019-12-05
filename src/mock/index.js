@@ -1,11 +1,19 @@
+/*
+ * @Descripttion: DOP
+ * @version: 1.0.0
+ * @Author: Author
+ * @Date: 2019-11-13 13:59:12
+ * @LastEditors: konglingzhan
+ * @LastEditTime: 2019-12-05 09:23:35
+ */
 
-import axios from 'axios'
+import axios from './request.js'
 // you do not need `import app from './modules/app'`
 // it will auto require all vuex module from modules file
-let mockFiles = require.context('./modules', true, /\.js$/)
+let mockFiles = require.context('./service', false, /\.js$/)
 mockFiles.keys().forEach(mockFile => {
   let fileName = mockFile.split('/')[1]
-  let mockFilePath = `./modules/${fileName}`
+  let mockFilePath = `./service/${fileName}`
   require(`${mockFilePath}`)
 })
 

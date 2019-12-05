@@ -4,7 +4,7 @@
  * @Author: Author
  * @Date: 2019-11-29 15:34:34
  * @LastEditors: konglingzhan
- * @LastEditTime: 2019-11-29 16:37:30
+ * @LastEditTime: 2019-11-29 16:41:41
  -->
 <template>
   <div class="login">
@@ -35,7 +35,6 @@ export default {
           name: 'Home'
         })
       } else {
-        debugger
         alert(res.data.msg)
       }
     }

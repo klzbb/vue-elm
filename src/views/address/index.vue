@@ -50,7 +50,6 @@
 <script>
 import { F100100, F100101, F100102 } from '@/service/index.js'
 import PubHeader from '@/components/Header/index.vue'
-import { M100100 } from '@/mock/index.js'
 export default {
   name: 'Address',
   components: { PubHeader },
@@ -66,8 +65,6 @@ export default {
   },
   methods: {
     async init () {
-      let res = await M100100({ name: 'konglingzhan' })
-      console.log(res)
       this.F100100()
       this.F100101()
       this.F100102()
