@@ -32,6 +32,11 @@ const routes = [
     component: () => import('@/views/login-register/index.vue')
   },
   {
+    path: '/rem',
+    name: 'Rem',
+    component: () => import('@/views/rem/index.vue')
+  },
+  {
     path: '/50X',
     name: '50X',
     component: () => import('@/views/err/50x.vue')

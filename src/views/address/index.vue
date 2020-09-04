@@ -45,6 +45,7 @@
         </ul>
       </div>
     </div>
+    <div class="rem" @click="rem">rem</div>
   </div>
 </template>
 <script>
@@ -64,6 +65,11 @@ export default {
     this.init()
   },
   methods: {
+    rem () {
+      this.$router.push({
+        name: 'Rem'
+      })
+    },
     async init () {
       this.F100100()
       this.F100101()
@@ -185,6 +191,15 @@ export default {
     width: 28px;
     height: 28px;
     fill: #999;
+  }
+  .rem {
+    position: fixed;
+    bottom: 40px;
+    right: 10px;
+    background-color: red;
+    border-radius: 6px;
+    padding: 3px 5px;
+    color: #fff;
   }
 }
 </style>
