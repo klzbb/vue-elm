@@ -14,6 +14,7 @@ module.exports = {
   // proxy set
   devServer: {
     port: '9000',
+    open: true,
     proxy: {
       '/api': {
         target: 'http://m.baidu.com', // 目标地址
