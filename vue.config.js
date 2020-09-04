@@ -47,7 +47,7 @@ module.exports = {
         plugins: [
           // 把px单位换算成rem单位
           require('postcss-pxtorem')({
-            rootValue: 75, // 换算的基数(设计图750的根字体为32)
+            rootValue: 75, // 换算的基数(设计图为width 为 750px 对应 75；375px 对应 37.5)
             selectorBlackList: ['.van'], // 要忽略的选择器并保留为px。
             propList: ['*'], // 可以从px更改为rem的属性。
             minPixelValue: 2 // 设置要替换的最小像素值。

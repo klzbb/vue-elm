@@ -12,11 +12,10 @@ import router from './router'
 import store from './store'
 
 import FastClick from 'fastclick'
-
-import 'lib-flexible/flexible.js' // rem set
+import 'lib-flexible/flexible.js'
 import '@/icons' // global svg
-import '@/permission.js'
-FastClick.attach(document.body) // permission control
+import '@/permission.js' // permission control
+FastClick.attach(document.body) // fix移动端点击延时
 
 Vue.config.productionTip = false
 

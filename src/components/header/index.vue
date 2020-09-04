@@ -25,7 +25,8 @@ export default {
 </script>
 <style lang="scss">
 .header{
-  width: 100%;
+  // width: 100%;
+  width: 750px;
   box-sizing: border-box;
   position: fixed;
   top: 0;
