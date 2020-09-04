@@ -12,7 +12,7 @@ import router from './router'
 import store from './store'
 
 import FastClick from 'fastclick'
-import 'lib-flexible/flexible.js'
+import 'lib-flexible/flexible.js' // rem布局js库
 import '@/icons' // global svg
 import '@/permission.js' // permission control
 FastClick.attach(document.body) // fix移动端点击延时
