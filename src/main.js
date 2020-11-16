@@ -16,6 +16,7 @@ import FastClick from 'fastclick'
 import 'lib-flexible/flexible.js' // rem布局js库
 import '@/icons' // global svg
 import '@/permission.js' // 全局路由钩子函数
+import '@/utils/sysUtil.js' // 识别客户端类型和web浏览器类型
 
 import vFilters from '@/filters/index.js' // register global filters
 for (const key in vFilters) {
