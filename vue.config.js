@@ -6,12 +6,13 @@
  * @LastEditors: konglingzhan
  * @LastEditTime: 2019-11-29 14:30:08
  */
-const path = require('path')
+const path = require('path');
+const CompressionPlugin = require("compression-webpack-plugin")
 function resolve (dir) {
   return path.join(__dirname, dir)
 }
 module.exports = {
-  // proxy set
+  // proxy set(代理配置)
   devServer: {
     port: '9000',
     open: true,
@@ -24,7 +25,22 @@ module.exports = {
       }
     }
   },
+  configureWebpack: config => {
+    if (process.env.NODE_ENV === 'production') {
+      return { // gzip 压缩配置
+        plugins: [
+          new CompressionPlugin({
+            test: /\.js$|\.html$|.\css/, // 匹配文件名
+            threshold: 10240, // 对超过10k的数据压缩
+            deleteOriginalAssets: false // 不删除源文件
+          })
+        ]
+      }
+    }
+  },
   chainWebpack (config) {
+    // set alias(设置文件引用别名)
+    config.resolve.alias.set('@', resolve('src')) // 默认开启
     // set svg-sprite-loader
     config.module
       .rule('svg')
