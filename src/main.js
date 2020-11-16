@@ -6,6 +6,7 @@
  * @LastEditors: konglingzhan
  * @LastEditTime: 2019-12-06 10:54:18
  */
+import 'babel-polyfill' // 全局垫片
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
@@ -14,8 +15,14 @@ import store from './store'
 import FastClick from 'fastclick'
 import 'lib-flexible/flexible.js' // rem布局js库
 import '@/icons' // global svg
-import '@/permission.js' // permission control
-FastClick.attach(document.body) // fix移动端点击延时
+import '@/permission.js' // 全局路由钩子函数
+
+import vFilters from '@/filters/index.js' // register global filters
+for (const key in vFilters) {
+  Vue.filter(key, vFilters[key])
+}
+
+FastClick.attach(document.body) // 移动端点击延时
 
 Vue.config.productionTip = false
 

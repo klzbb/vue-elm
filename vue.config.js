@@ -6,8 +6,8 @@
  * @LastEditors: konglingzhan
  * @LastEditTime: 2019-11-29 14:30:08
  */
-const path = require('path');
-const CompressionPlugin = require("compression-webpack-plugin")
+const path = require('path')
+const CompressionPlugin = require('compression-webpack-plugin')
 function resolve (dir) {
   return path.join(__dirname, dir)
 }
