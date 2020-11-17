@@ -49,4 +49,4 @@ const browser = {
   }
 }
 sys.browser = browser.versions()
-store.dispatch('appUtil/setLocalType', sys)
+store.commit('sysType/SAVE_SYS_TYPE', sys)
