@@ -1,7 +1,7 @@
 <template>
-    <div id="app">
-        <router-view></router-view>
-    </div>
+  <div id="app">
+    <router-view />
+  </div>
 </template>
 <script>
 export default {
@@ -9,30 +9,31 @@ export default {
 }
 </script>
 <style lang="scss">
-
 #nprogress .bar {
   background: red !important; //进度条自定义颜色
   height: 100px;
 }
-*{
-  margin: 0;
+* {
+        margin: 0;
   padding: 0;
 }
-ul,li{
+ul,
+li {
   list-style: none;
 }
-html,body{
+html,
+body {
   width: 100%;
   height: 100%;
   color: #000;
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
 }
 .router-fade-enter-active,
 .router-fade-leave-active {
-    transition: opacity 0.3s;
+  transition: opacity 0.3s;
 }
 .router-fade-enter,
 .router-fade-leave-active {
-    opacity: 0;
+  opacity: 0;
 }
 </style>

@@ -10,7 +10,7 @@
           <span>定位不准时，请在城市列表中选择</span>
         </div>
         <div class="cur_row">
-          <span class="city">{{currentCity.name}}</span>
+          <span class="city">{{ currentCity.name }}</span>
           <svg-icon icon-class="next" class="next" />
         </div>
       </div>
@@ -18,28 +18,34 @@
         <h4 class="title">热门城市</h4>
         <ul class="list">
           <router-link
-            tag="li"
             v-for="item in hotCityList"
-            :to="'/city/' + item.id"
             :key="item.id"
-          >{{item.name}}</router-link>
+            tag="li"
+            :to="'/city/' + item.id"
+          >{{ item.name }}</router-link>
         </ul>
       </div>
       <div class="cities">
         <ul class="cities_out">
-          <li v-for="(value, key, index) in cities" :key="key" class="cities_out_item">
+          <li
+            v-for="(value, key, index) in cities"
+            :key="key"
+            class="cities_out_item"
+          >
             <h4 class="city_title">
-              {{key}}
+              {{ key }}
               <span v-if="index == 0">（按字母排序）</span>
             </h4>
             <ul class="cities_inner">
               <router-link
-                tag="li"
                 v-for="item in value"
-                :to="'/city/' + item.id"
                 :key="item.id"
+                tag="li"
+                :to="'/city/' + item.id"
                 class="cities_inner_item"
-              >{{item.name}}</router-link>
+              >
+                {{ item.name }}
+              </router-link>
             </ul>
           </li>
         </ul>
@@ -82,17 +88,17 @@ export default {
     },
     // 定位当前城市
     async F100100 () {
-      let data = await F100100()
+      const data = await F100100()
       this.currentCity = data
     },
     // 热门城市
     async F100101 () {
-      let data = await F100101()
+      const data = await F100101()
       this.hotCityList = data
     },
     // 所有城市
     async F100102 () {
-      let data = await F100102()
+      const data = await F100102()
       this.cities = data
     }
   }
@@ -106,7 +112,7 @@ export default {
     padding-top: 100px;
     .cur {
       &_row {
-        background-color: #fff;
+             background-color: #fff;
         display: flex;
         padding: 0 20px;
         justify-content: space-between;

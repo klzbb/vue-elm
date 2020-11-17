@@ -9,10 +9,10 @@
 <template>
   <div class="login">
     <div>
-      <input type="text" v-model="account">
+      <input v-model="account" type="text">
     </div>
     <div>
-      <input type="text" v-model="pwd">
+      <input v-model="pwd" type="text">
     </div>
     <button @click="login(account,pwd)">登录</button>
   </div>
@@ -29,7 +29,7 @@ export default {
   },
   methods: {
     async login (account, pwd) {
-      let res = await M100102({ account, pwd })
+      const res = await M100102({ account, pwd })
       if (res.data.code === 200) {
         this.$router.push({
           name: 'Home'
