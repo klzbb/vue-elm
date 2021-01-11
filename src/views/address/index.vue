@@ -56,7 +56,7 @@
 </template>
 <script>
 import { F100100, F100101, F100102 } from '@/service/index.js'
-import PubHeader from '@/components/Header/index.vue'
+import PubHeader from '@/components/header/index.vue'
 export default {
   name: 'Address',
   components: { PubHeader },
