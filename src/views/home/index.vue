@@ -20,7 +20,7 @@ export default {
     }
   },
   mounted () {
-
+    console.log("测试jenkins构建后上传到远程服务器")
   },
   methods: {
     init () {
